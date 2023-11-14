@@ -5,10 +5,9 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "build": "npx tsc",
+    "build": "npm install && npx tsc",
     "start": "node dist/app.js",
-    "dev": "concurrently \"npx tsc --watch\" \"node --watch dist/app.js\"",
-    "build:prod": "npm install && npm run build"
+    "dev": "concurrently \"npx tsc --watch\" \"node --watch dist/app.js\""
   },
   "keywords": [],
   "author": "",
