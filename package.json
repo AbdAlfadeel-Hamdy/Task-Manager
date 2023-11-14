@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "npx tsc",
-    "start": "node dist/app.js",
-    "dev": "concurrently \"npx tsc --watch\" \"node --watch dist/app.js\"",
+    "start": "node build/app.js",
+    "dev": "concurrently \"npx tsc --watch\" \"node --watch build/app.js\"",
     "build:prod": "npm install && npm run build"
   },
   "keywords": [],
