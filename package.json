@@ -1,8 +1,8 @@
 {
-  "name": "express-tutorial",
+  "name": "task-manager",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./build/app.js",
   "type": "module",
   "scripts": {
     "build": "npx tsc",
