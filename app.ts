@@ -3,6 +3,9 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 // ROUTERS
 import tasksRouter from './routes/tasks.js';
+// Middlewares
+import notFound from './middlewares/notFound.js';
+import errorHandler from './middlewares/errorHandler.js';
 // Access .env file
 dotenv.config();
 // Create HTTP Server
@@ -13,6 +16,10 @@ app.use(express.json());
 app.use(express.static('./public'));
 // API ROUTES
 app.use('/api/v1/tasks', tasksRouter);
+// NOT FOUND Handler
+app.use(notFound);
+// Global Error Handler
+app.use(errorHandler);
 // Connect to Database and Start Listening
 try {
   await mongoose.connect(process.env.MONGO_URL!);
